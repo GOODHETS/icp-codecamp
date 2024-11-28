@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        body {
+            background-color: #B99470;
+        }
+
+        .nav-bar {
+            background-color: #FEFAE0;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            width: 98%;
+            margin: auto;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #B99470;
+            font-weight: bold;
+            transition: .5s;
+        }
+
+        nav ul li a:hover {
+            border-radius: 50%;
+            color: #5F6F52;
+            transform: scale(1.25);
+        }
+
+        .logo {
+            color: black;
+            font-size: 40px;
+            letter-spacing: 10px;
+        }
+
+        .right-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Changed to 2 columns */
+            gap: 20px;
+            padding: 20px;
+            margin: auto; /* Center the grid */
+            max-width: 800px; /* Set a maximum width for better responsiveness */
+        }
+
+        .content {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: #eeeded;
+            font-weight: bolder;
+            opacity: 0; /* Set initial opacity to 0 for fade effect */
+            animation: fadeIn 1s forwards; /* Apply fade-in animation */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .content img {
+            max-width: 100%; /* Make images responsive */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .content:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Final opacity */
+            }
+        }
+
+        /* Delay for each content box to create a staggered effect */
+        .content:nth-child(1) {
+            animation-delay: 0.5s; /* Delay for first box */
+        }
+        .content:nth-child(2) {
+            animation-delay: 1s; /* Delay for second box */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <nav>
+            <h2 class="logo">KUYAGOODS.</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="samplework.html">Sample Work</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="right-content">
+        <div class="content">
+            <div class="box"><span>Saint John Nepomucene Parochial School</span></div>
+            <a href="https://www.sjnps.edu.ph" target="_blank">
+                <img src="./pics/sjnps.png" alt="Saint John Nepomucene Parochial School">
+            </a>
+            <p>PRE-SCHOOL <br>
+                ELEMENTARY <br>
+                HIGH SCHOOL <br>
+                SENIOR HIGH SCHOOL
+            </p>
+        </div>
+        <div class="content">
+            <div class="box"><span>PHINMA Araullo University</span></div>
+            <a href="https://www.au.phinma.edu.ph" target="_blank">
+                <img src="./pics/au.png" alt="PHINMA Araullo University">
+            </a>
+            <p>COLLEGE</p>
+        </div>
+    </div>
+    
+</body>
+</html>

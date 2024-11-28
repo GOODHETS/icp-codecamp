@@ -1,5 +1,259 @@
-<center>
-<img src="new.png" width="100%"/>
-<br/>
-<img src="ceu_codecamp.jpg"/>
-</center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Poppins&family=Roboto&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FEFAE0; /* Background color for the preloader */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensure it covers everything */
+        }
+        #preloader img {
+            width: 100px; /* Adjust as necessary */
+        }
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Source Code Pro', monospace;
+        }
+        body {
+            background-color: #5F6F52;
+        }
+        nav {
+            display: flex;
+            background-color: #FEFAE0;
+            width: 100%;
+            margin: auto;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 25px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #B99470;
+            font-weight: bold;
+            transition: .5s;
+        }
+        nav ul li a:hover {
+            border-radius: 50%;
+            color: #5F6F52;
+            transform: scale(1.25);
+        }
+        .logo {
+            color: black;
+            font-size: 40px;
+            letter-spacing: 10px;
+            margin-left: 20px;
+        }
+
+        /* Main Content Styles */
+        .main-content h1 {
+            font-family: 'petch';
+            font-size: 100px;
+            margin-top: 120px;
+            margin-left: 10%;
+        }
+        .main-content h2 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 25px;
+            margin-left: 10%;
+            letter-spacing: 15px;
+        }
+        .main-content p {
+            margin-left: 10%;
+            margin-top: 20px;
+            margin-right: 35%;
+            letter-spacing: 2px;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+        button {
+            margin-left: 10%;
+            margin-top: 30px;
+            border: none;
+            padding: 10px;
+            width: 10%;
+            background-color: #5F6F52;
+            border: 1px solid black;
+            border-radius: 12px;
+            transition: .5s;
+            text-transform: uppercase;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 20px;
+        }
+        button:hover {
+            background-color: #A9B388;
+        }
+        img {
+            position: absolute;
+            left: 65%;
+            top: 20%;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #FEFAE0;
+            color: #5F6F52;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            position: fixed;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #FEFAE0;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Fade-in effect */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <p>Loading resources, please wait...</p> <!-- Optional message -->
+    </div>
+
+    <div class="nav-bar">
+        <nav>
+            <h2 class="logo fade-in">KUYAGOODS.</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="samplework.html">Sample Work</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content fade-in">
+        <h1>KUYAGOODS.</h1>
+        <h2>"Bringing tech to the people"</h2>
+        <p>Back in the days of the pandemic, my friends referred to me as
+            "kuyagoods" for one reason: they say I am a really kind person.
+            The tagline "bringing tech to the people" expresses my aim to
+            bring other people closer to technology.</p>
+    </div>
+
+    <img src="./pics/logo.png" alt="" class="fade-in">
+    <button class="fade-in" onclick="openModal()">CONTACT</button>
+
+    <!-- Modal for Contact Information -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Contact Information</h3>
+            <p>Email: mama.renia.au@phinmaed.com</p>
+            <p>Phone: +63 9297278336</p>
+            <p>Facebook: Marrion Louie M Renia</p>
+            <p>Tel: 0448033068</p>
+            <p>Github: https://github.com/GOODHETS</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/thorpe28?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/_u/marionrenia" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:Mama.renia.au@phinmaed.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="footer-p">&copy; 2023 Marrion Renia. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to open the modal
+        function openModal() {
+            document.getElementById("contactModal").style.display = "block";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("contactModal").style.display = "none";
+        }
+
+        // Close the modal if user clicks anywhere outside of the modal
+        window.onclick = function(event) {
+            var modal = document.getElementById("contactModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Ensure fade-in effect on page load
+        window.onload = function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                el.style.opacity = 1;
+            });
+            // Hide the preloader once the page has loaded
+            document.getElementById("preloader").style.display = "none";
+        };
+    </script>
+</body>
+</html>

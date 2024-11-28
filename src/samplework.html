@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sample Hover</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Source Code Pro', monospace;
+    }
+    body{
+        background-color: #5F6F52;
+    }
+    nav{
+        display: flex;
+        background-color: #FEFAE0;
+        width: 100%;
+        margin: auto;
+        padding: 20px 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 10px 25px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: #B99470;
+        font-weight: bold;
+        transition: .5s;
+    }
+    nav ul li a:hover{
+        border-radius: 50%;
+        color: #5F6F52;
+        transform: scale(1.25);
+        scale: 1.5;
+    }
+    .logo{
+        color: black;
+        font-size: 40px;
+        letter-spacing: 10px;
+        margin-left: 20px;
+    }
+    .skillset_container{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .gallery{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        padding: 50px;
+        padding-bottom: -20px;
+        margin-top: 10%;
+    }
+    .img-box{
+        width: 50px;
+        height: 300px;
+        margin: 10px;
+        margin-top: -30px;
+        margin-bottom: -30px;
+        padding: 40px;
+        border-radius: 50px;
+        background: url(pics/certi/ora1\ \(2\).jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        transition: width .5s;
+    }
+    .img-box:nth-child(2){
+        background: url(/pics/certi/tesda\ 1.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .img-box:nth-child(3){
+        background: url(/pics/certi/tesda\ 2.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .img-box:nth-child(4){
+        background: url(pics/certi/tesda\ 3.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .img-box:hover{
+        width: 400px;
+        cursor: pointer;
+    }
+
+    .skillset_container {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack the gallery and button vertically */
+    }
+
+    .zoom-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #B99470;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+   }
+
+    .zoom-button:hover {
+    transform: scale(1.2); /* Zoom effect */
+    background-color: #5F6F52; /* Change background color on hover */
+    }
+
+    h1{
+        text-transform: uppercase;
+        font-family: 'Chakra Petch', sans-serif;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .second-content h1{
+        margin-top: 130px;
+        margin-bottom: 30px;
+        margin-top: 10%;
+        font-family: 'Chakra Petch', sans-serif;
+    }
+    .second-content .skills-list {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .skills-list li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .skills-list i {
+        font-size: 50px;
+        color: #B99470;
+        margin-bottom: 20px;
+    }
+    h2 {
+      color: black;
+      font-size: 40px;
+      text-align: center;
+      font-family: 'Source Code Pro', monospace;
+    }
+
+    .project-content {
+        display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Set to 4 columns */
+      gap: 20px;
+      padding: 20px;
+      
+    }
+
+    .project-item {
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      text-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
+      font-family: 'Poppins', sans-serif;
+      color: #eeeded;
+      font-weight: bolder;
+    } 
+    .project-item p{
+        color: black;
+    }
+    .project-item img {
+      max-width: 300px;
+      height: 150px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .project-item:hover img {
+      transform: scale(1.1); /* Increase size on hover */
+      
+    }
+</style>
+<body>
+    <div class="nav-bar">
+        <nav>
+            <h2 class="logo">KUYAGOODS.</h2>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="samplework.html">Sample Work</a></li>
+            <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1>certificate</h1>
+    <div class="skillset_container">
+        <div class="gallery">
+           <div class="img-box"></div>
+           <div class="img-box"></div>
+           <div class="img-box"></div>
+           <div class="img-box"></div>
+        </div>
+        <a href="https://drive.google.com/drive/folders/17kUocP5h9CEqxNU7QQ11UbwbXEpGSVUW" target="_blank">
+            <button class="zoom-button">CERTIFICATE</button>
+        </a>        
+    </div>    
+   <div class="second-content">
+        <h1>SKILL</h1>
+        <div class="skill-section">
+            <section>
+                <ul class="skills-list">
+                    <li><i class="fas fa-lightbulb"></i><p>Creativity</p></li>
+                    <li><i class="fas fa-brain"></i><p>Critical Thinking</p></li>
+                    <li><i class="fas fa-chart-bar"></i><p>Data Analysis</p></li>
+                    <li><i class="fab fa-python"></i><p>Python</p></li>
+                    <li><i class="fab fa-php"></i><p>PHP</p></li>
+                    <li><i class="fab fa-js"></i><p>JavaScript</p></li>
+                </ul>
+            </section>
+           </div>
+   </div>
+   <h2>Project</h2>
+
+        <div class="project-content">
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/1ADTQ2wnI6mbpQ6N8masKc-LG_f1GPGfV?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="pics/webiste/university.jpg" alt="Project Image 1">
+            </a>
+            <p>Student Information System</p>
+          </div>
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/1zFF0SdYJy8cFTvLI9OeF_1vWW86cFs1g?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="./pics/webiste/neti (4).jpg" alt="Project Image 2">
+            </a>
+            <p>Furni Shop</p>
+          </div>
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/1r1J3gByIaOi4ExL71gWykrZhQN9cbpB7?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="./pics/webiste/neti (5).jpg" alt="Project Image 3">
+            </a>
+            <p>Book Borrowing System</p>
+          </div>
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/1BbQBe5FWcaoX3v01yj7uk9J9Gx1VfOKY?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="pics/webiste/ordering.jpg" alt="Project Image 3">
+            </a>
+            <p>Ordering System</p>
+          </div>
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/12dwJqyC63PhOZl0wwpfX6IrcXBYvUxvN?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="pics/webiste/neti (1).jpg" alt="Project Image 3">
+            </a>
+            <p>NETIQUITTE</p>
+          </div>
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/1L1IcfUZQKLEbTK_ZZpI_4seY38Cc8oJm?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="pics/webiste/neti (2).jpg" alt="Project Image 3">
+            </a>
+            <p>WEAHER WIDGETS TEMPLATE</p>
+          </div>
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/12dwJqyC63PhOZl0wwpfX6IrcXBYvUxvN?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="pics/webiste/neti (3).jpg" alt="Project Image 3">
+            </a>
+            <p>PHINMA STUDENT EVALUATION (PSE)</p>
+          </div>
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/1sukm-MOkJspsjRBL9EySFLSLCk4rNsFe?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="pics/webiste/morena.jpg" alt="Project Image 3">
+            </a>
+            <p>Morena Store</p>
+          </div>
+          
+          <div class="project-item">
+            <a href="https://drive.google.com/drive/u/0/folders/1AB16APDoV_5RPdAN0X0-hiqV9QHhgJ8Z?fbclid=IwAR1NoPI-ZRJk5iCsYQYWt3_tTpeXg8jLFom1y9RuFPIkxFxklnf9fWhTuxE">
+            <img src="pics/webiste/kaintayo.png" alt="Project Image 3">
+            </a>
+            <p>kAIN TAYO FOOD SYSTEM</p>
+          </div>
+            <div class="project-item">
+            <a href="https://github.com/GOODHETS/ivis_project">
+            <img src="pics/webiste/image.png" alt="Project Image 3">
+            </a>
+            <p>IVIS/Intelligent Vehicle Identification System</p>
+          </div>
+            <div class="project-item">
+            <a href="https://github.com/jeswaa/Apollo-Fitness-Tracker">
+            <img src="pics/webiste/1image.png" alt="Project Image 3">
+            </a>
+            <p>APOLLO FITTNESS TRACKER</p>
+          </div>
+                      <div class="project-item">
+            <a href="https://www.salesforce.com/trailblazer/g84p6wknezfdwa2oab">
+            <img src="pics/webiste/SALESFORCE.png" alt="Project Image 3">
+            </a>
+            <p>SALESFORCE:BAGDES</p>
+          </div>
+</body>
+</html>
